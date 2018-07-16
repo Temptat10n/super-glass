@@ -1,0 +1,43 @@
+<!-- 个人信息 -->
+<view class='ge'>
+  <view class='gee'>
+    <view class='kuang'>
+      <text>头像:</text>
+      <input type='text' class='xin1' disabled='true'></input>
+    </view>
+    <view class='kuang'>
+      <text>昵称:</text>
+      <input type='text' class='xin1' disabled='true'>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </input>
+    </view>
+  </view>
+
+  <view class='ger'>
+    <view class='kuang'>
+      <text class='xinn'>手机号:</text>
+      <input class='xin' type='text' auto-focus></input>
+    </view>
+    <view class='kuang'>
+      <text class='xinn'>性  别:</text>
+      <input class='xin' type='text' auto-focus></input>
+    </view>
+  </view>
+</view>
+<!-- 个人信息 -->
+<!-- 头像 -->
+<view class='tou'>
+
+  <navigator url='/pages/user/users/users' hover-class='navigator-hover'>
+    <view class='user'>
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </block>
+      </view>
+    </view>
+  </navigator>
+
+</view>
+<!-- 头像 -->

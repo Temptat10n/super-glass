@@ -1,0 +1,72 @@
+<!--pages/user/user.wxml-->
+<view id='all'>
+  <!-- 个人信息 -->
+  <navigator url='../user/users/users' hover-class='navigator-hover'>
+    <view class='user'>
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+    </view>
+  </navigator>
+  <!-- 个人信息 -->
+  <!-- 大声道 -->
+  <view class='ke'>
+    <wxc-flex main="center" cross="center">
+      <button open-type="contact" class='kuang1'>
+        <image src='../../tu/cs.png' class='vip'></image>
+        <view hover-class="navigator-hover" class='zi'>在线客服</view>
+      </button>
+    </wxc-flex>
+    <wxc-flex main="center" cross="center">
+      <navigator url="../shang/shang" class='kuang'>
+        <image src='../../tu/text.png' class='vip'></image>
+        <view hover-class="navigator-hover" class='zi'>品牌介绍</view>
+      </navigator>
+    </wxc-flex>
+  </view>
+  <!-- 大声道 -->
+  <!-- 订单 -->
+  <view id='ding'>
+    <text class='ding1'>我的订单</text>
+    <navigator url="./ding/ding" hover-class="navigator-hover" class='tiao'>查看更多订单>></navigator>
+    <view id='wen'></view>
+    <image src='../../tu/fu.png' class='tu'></image>
+    <image src='../../tu/fa.png' class='tu'></image>
+    <image src='../../tu/shou.png' class='tu'></image>
+    <image src='../../tu/yi.png' class='tu'></image>
+    <image src='../../tu/tui.png' class='tu'></image>
+    <navigator url="./ding/ding" hover-class="navigator-hover" class='dan'>代付款</navigator>
+    <navigator url="./ding/ding" hover-class="navigator-hover" class='dan1'>代发货</navigator>
+    <navigator url="./ding/ding" hover-class="navigator-hover" class='dan2'>待收货</navigator>
+    <navigator url="./ding/ding" hover-class="navigator-hover" class='dan3'>已完成</navigator>
+    <navigator url="./ding/ding" hover-class="navigator-hover" class='dan4'>退货款</navigator>
+  </view>
+  <!-- 订单 -->
+  <!-- 我的工具 -->
+  <view class='gong'>
+    <navigator url="you/you" hover-class="navigator-hover" class='xin'>
+      <text>优惠券</text>
+    </navigator>
+    <navigator url="/pages/user/di/dii/dii" hover-class="navigator-hover" class='xin'>
+      <text>我的地址</text>
+    </navigator>
+    <navigator url="" hover-class="navigator-hover" class='xin'>
+      <!-- <text>分享</text> -->
+      <button open-type='share' class=''>分享</button>
+    </navigator>
+    <navigator url="" bindtap="mapShowClick" hover-class="navigator-hover" class='xin'>
+      <text>地图</text>
+    </navigator>
+    <navigator url="../shang/shang" hover-class="navigator-hover" class='xin'>
+      <text>关于</text>
+    </navigator>
+  </view>
+  <!-- 我的工具 -->
+  <!-- 需要使用 button 来授权登录 -->
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
+</view>

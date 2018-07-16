@@ -1,0 +1,225 @@
+#all {
+    background-color: lightgrey;
+    width: 100%;
+    height: 1200rpx;
+}
+
+/* 个人信息 */
+
+.user {
+    border: 2rpx solid gainsboro;
+    width: 100%;
+    height: 200rpx;
+    position: relative;
+    background-color: gray;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20rpx;
+    left: 20rpx;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: white;
+    position: relative;
+    bottom: 130rpx;
+    left: 170rpx;
+    font-size: 30rpx;
+}
+
+/* 个人信息 */
+
+/* 大声道 */
+
+.ke {
+    flex: 5;
+    border: 2rpx solid white;
+    width: 100%;
+    height: 150rpx;
+    background: white;
+    position: relative;
+    top: 13rpx;
+}
+
+.kuang {
+    width: 50%;
+    /* top: 10rpx; */
+    float: left;
+    height: 150rpx !important;
+    text-align: center;
+    background-color: #fff !important;
+    border-width: 0rpx;
+    padding-left: 0rpx !important;
+    padding-right: 0rpx !important;
+    line-height: 50rpx;
+    margin-left:0rpx !important;
+    margin-right:0rpx !important;
+    box-sizing:inherit !important;
+    position: relative;
+}
+.kuang1 {
+     width: 50%;
+    top: 10rpx;
+    float: left;
+    height: 150rpx !important;
+    text-align: center;
+    background-color: #fff !important;
+    border-width: 0rpx;
+    padding-left: 0rpx !important;
+    padding-right: 0rpx !important;
+    line-height: 50rpx;
+    margin-left:0rpx !important;
+    margin-right:0rpx !important;
+    box-sizing:inherit !important;
+    position: static; 
+}
+
+.kuang image, .kuang view {
+    flex: 1;
+}
+
+.vip {
+    width: 100rpx;
+    height: 80rpx;
+    margin-left: 20rpx;
+}
+
+.zi {
+    font-size: 24rpx;
+    margin-left: 10rpx;
+}
+
+/* 大声道 */
+
+/* 订单 */
+
+#ding {
+    border: 2rpx solid gainsboro;
+    width: 100%;
+    height: 220rpx;
+    position: relative;
+    top: 30rpx;
+    background: white;
+}
+
+.ding1 {
+    font-size: 24rpx;
+    margin-left: 20rpx;
+}
+
+.tiao {
+    font-size: 24rpx;
+    position: relative;
+    bottom: 36rpx;
+    left: 550rpx;
+    color: gray;
+}
+
+#wen {
+    border-bottom: 2rpx solid gainsboro;
+    width: 100%;
+    position: relative;
+    bottom: 20rpx;
+}
+
+.tu {
+    display: flex;
+    width: 150rpx;
+    height: 135rpx;
+    float: left;
+    position: relative;
+    bottom: 30rpx;
+}
+
+.dan {
+    float: left;
+    font-size: 24rpx;
+    position: relative;
+    bottom: 65rpx;
+    margin-left: 40rpx;
+}
+
+.dan1 {
+    float: left;
+    font-size: 24rpx;
+    position: relative;
+    bottom: 65rpx;
+    margin-left: 70rpx;
+}
+
+.dan2 {
+    float: left;
+    font-size: 24rpx;
+    position: relative;
+    bottom: 65rpx;
+    margin-left: 80rpx;
+}
+
+.dan3 {
+    float: left;
+    font-size: 24rpx;
+    position: relative;
+    bottom: 65rpx;
+    margin-left: 85rpx;
+}
+
+.dan4 {
+    float: left;
+    font-size: 24rpx;
+    position: relative;
+    bottom: 65rpx;
+    margin-left: 75rpx;
+}
+
+/* 订单 */
+
+/* 我的工具 */
+
+.gong {
+    border: 2rpx solid white;
+    width: 100%;
+    height: 405rpx;
+    position: relative;
+    top: 50rpx;
+    background: white;
+}
+
+.xin{
+    border: 2rpx solid white;
+    width: 100%;
+    height: 70rpx;
+    border-bottom-color: gainsboro;
+    float: left;
+    font-size: 24rpx;
+    position: relative;
+    bottom: 25rpx;
+}
+.xin button {
+    width: 100%;
+    height: 70rpx;
+    font-size: 24rpx;
+    position: relative;
+    text-align: left;
+    background-color: #fff;
+    padding: 0rpx;
+    padding-left:20rpx;
+    border-width: 0px ;
+}
+.xin text {
+    line-height: 70rpx;
+    margin-left: 20rpx;
+}
+.button-hover{
+    position: static
+}
+/* 我的工具 */

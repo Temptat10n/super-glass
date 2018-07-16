@@ -1,0 +1,16 @@
+<!-- 收货地址列表页面 -->
+<view class='all'>
+    <!-- 地址显示列表 -->
+    <view wx:for="{{addressList}}" url='' class='goods_main_list'>
+        <navigator url='/pages/user/order/detail/detail?addressId={{item.id}}&address={{item.address}}&name={{item.name}}&phone={{item.phone}}' class='userUrl goods_title' id="{{item.id}}">
+            <view class='userName'>{{item.name}}</view>
+            <view class='userPhone'>{{item.phone}}</view>
+            <view class='userRess'>{{item.address}}</view>
+        </navigator>
+    </view>
+    <view class="noCommodity {{addressList==null?'show':''}}">暂无收货地址</view>
+    <!-- 新增地址按钮 -->
+    <navigator url='../../user/di/di'>
+        <button class='wdd'>新建地址</button>
+    </navigator>
+</view>

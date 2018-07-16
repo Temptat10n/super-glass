@@ -1,0 +1,55 @@
+<!--pages/user/order/detail/detail.wxml-->
+<view class='section'>
+    <!-- 地址 -->
+    <navigator url='../../../index/wd/wd'>
+        <view class='user_box'>
+            <view class='user_box_left'>
+                <rich-text class='user_name_box'>收件人：
+                    <text class='user_name'>{{addressName}}</text>
+                </rich-text>
+                <view class='user_address_box'>收件地址：
+                    <text class='user_address' id="{{addressId}}">{{address}}</text>
+                </view>
+                <view class='user_address_box'>联系电话：
+                    <text class='user_address'>{{addressPhone}}</text>
+                </view>
+            </view>
+            <image class='go_icon' src='/img/go.png'></image>
+        </view>
+    </navigator>
+    <!-- 地址 -->
+</view>
+<view class='section section1' id="{{commodityId}}">
+    <image class='bay_img' src='https://yj.beaconway.cn/uploads/{{commodityImg[0]}}'></image>
+    <view class='bay_text_box'>
+        <text class='bay_text'>{{commodityTitle}}</text>
+        <!-- <rich-text class='bay_class'>尺寸：****</rich-text> -->
+        <view class='bay_numbs'>
+            <text class='bay_price'>￥{{commodityPrice}}</text>
+            <text class='bay_num'>*1</text>
+        </view>
+    </view>
+    <view class='clear'></view>
+</view>
+<!-- <view class='section'>
+  <view class='coupons'>
+    <text class='coupon_text'>优惠券：您有1张优惠券</text>
+    <image class='go_icon' src='/img/go.png'></image>
+  </view>
+</view> -->
+<view class='bay_goods_box'>
+    <view class='bay_goods_total'>商品合计
+        <text class='bay_goods_price goods_right'>￥{{commodityPrice}}</text>
+    </view>
+    <view class='bay_goods_freight'>运费
+        <text class='goods_right'>￥0.00</text>
+    </view>
+    <view class='bay_goods_discount'>优惠总计
+        <text class='goods_right'>-0</text>
+    </view>
+</view>
+<view class='order_bot'>
+    <view class='total_price'>应付：￥{{commodityPrice}}</view>
+    <view class='go_pay'>去付款</view>
+    <view class='clear'></view>
+</view>

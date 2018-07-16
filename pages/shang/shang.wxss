@@ -1,0 +1,16 @@
+.title {
+    font-size: 40rpx;
+    font-weight: 6;
+    align-items: conter;
+    display: flex;
+}
+
+.wen {
+    font-size: 30rpx;
+    text-indent: 100rpx;
+}
+
+page {
+    padding: 10rpx;
+    font-size: 35rpx;
+}

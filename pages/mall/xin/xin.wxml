@@ -1,0 +1,20 @@
+<!-- 导航 -->
+  <view class="page">
+    <scroll-view class="index_menu_list" scroll-x>
+      <view wx:for="{{nav}}" data-num="{{item.id}}" class="index_menu_li {{_num==item.id?'active':''}}" bindtap="menuClick{{item.id}}">{{item.cate_name}}</view>
+    </scroll-view>
+  </view>
+  <!-- 导航 -->
+
+
+<!-- 商品展示 -->
+<view class='section goods_main'>
+  <navigator url='/pages/mall/detail/detail?commodityId={{item.id}}' wx:for="{{zhihu}}" class=' goods_main_list'>
+    <image src='https://yj.beaconway.cn/uploads/{{item.img}}' class='goods_img'></image>
+    <rich-text class='goods_title'>{{item.title}}</rich-text>
+    <rich-text class='goods_price'>￥{{item.price}}</rich-text>
+  </navigator>
+  <view class='clear'></view>
+  <view class="noCommodity {{zhihu==null?'show':''}}">暂无商品</view>
+</view>
+<!-- 商品展示 -->

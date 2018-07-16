@@ -1,0 +1,73 @@
+/* 个人信息 */
+.ge{
+  border: 2rpx solid gainsboro;
+  width: 100%;
+  height:1000rpx;
+  background: gainsboro;
+}
+.gee{
+  border: 2rpx solid white;
+  width: 100%;
+  height: 300rpx;
+  background: white;
+  margin-top: 20rpx;
+}
+.kuang{
+  border: 2rpx solid white;
+  width: 100%;
+  height: 90rpx;
+  margin-top: 30rpx;
+  border-bottom-color: gainsboro
+}
+.xinn{
+  line-height: 80rpx;
+}
+.xin{
+  border: 2rpx solid white;
+  height: 60rpx;
+  position: relative;
+  left: 130rpx;
+  bottom: 83rpx;
+}
+.xin1{
+   border: 2rpx solid white;
+  height: 60rpx;
+  position: relative;
+  left: 130rpx;
+  bottom:50rpx;
+}
+.ger{
+  border: 2rpx solid white;
+  width: 100%;
+  height: 260rpx; 
+  background: white;
+  margin-top: 20rpx;
+}
+/* 个人信息 */
+/* 头像 */
+.tou{
+  border: 2rpx solid white;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: relative;
+  bottom: 980rpx;
+  left: 600rpx; 
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+}
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%; 
+}
+.userinfo-nickname {
+  color:black;
+  position: relative;
+  bottom: 50rpx;
+  left: 480rpx;
+  font-size: 35rpx;
+}
+/* 头像 */

@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 导航 -->
+    <view class="page">
+        <scroll-view class="index_menu_list" scroll-x>
+            <view data-num="0" class="index_menu_li {{_num==0?'active':''}}" bindtap="menuClick">首页</view>
+            <view wx:for="{{nav}}" data-num="{{item.id}}" class="index_menu_li {{_num==item.id?'active':''}}" bindtap="menuClick{{item.id}}">{{item.cate_name}}</view>
+
+        </scroll-view>
+    </view>
+    <!-- 导航 -->
+    <!-- 轮播图 -->
+    <swiper class='bo' indicator-dots='{{indicatordots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+        <block wx:for="{{lun}}" wx:for-item="item">
+            <swiper-item>
+                <navigator url='../mall/detail/detail?commodityId={{item.id}}'>
+                    <image src="https://yj.beaconway.cn/uploads/{{item.img}}" data-id='{{item.b}}' bindtap="bindViewTap" class="slide-image" mode='aspectFill'></image>
+                </navigator>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class='titleCon all'>
+        <navigator class='titleConter' no="3" ptag="7001.1.213"><image src='/tu/duigou.png'></image> 下单有礼</navigator>
+        <navigator class='titleConter' no="3" ptag="7001.1.213"><image src='/tu/duigou.png'></image> 正品行货</navigator>
+        <navigator class='titleConter' no="3" ptag="7001.1.213"><image src='/tu/duigou.png'></image> 专属定制</navigator>
+    </view>
+
+    <!-- 轮播图 -->
+    <!-- 活动专区 -->
+    <!-- 商品展示 -->
+    <view class='all'>
+        <navigator wx:for="{{zhihu}}" url='../mall/detail/detail?commodityId={{item.id}}' class=' goods_main_list'>
+            <image src='https://yj.beaconway.cn/uploads/{{item.img}}' class='goods_img'></image>
+            <rich-text class='goods_title'>{{item.title}}</rich-text>
+            <rich-text class='goods_price'>￥{{item.price}}</rich-text>
+        </navigator>
+        <view class="noCommodity {{zhihu==null?'show':''}}">暂无商品</view>
+    </view>
+    <!-- 商品展示 -->
+    <!-- 滚动条 -->
+    <!-- <scroll-view scroll-y="true" style='height: 7000rpx'>
+    <view style='width:5rpx; height:4000rpx;'></view>
+  </scroll-view> -->
+    <!-- 滚动条 -->
+
+
+
+
+
+
+
+
+
+
+</view>

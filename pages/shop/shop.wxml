@@ -1,0 +1,46 @@
+<!-- 购物车页面 -->
+<!--pages/shop/shop.wxml-->
+<view class="cart-box">
+    <!-- wx:for 渲染购物车列表 -->
+    <view wx:for="{{carts}}" class='goods_cart_list'>
+
+        <!-- wx:if 是否选择显示不同图标 -->
+        <icon wx:if="{{item.selected}}" class='doit' type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" class='doit' bindtap="selectList" data-index="{{index}}" />
+
+        <!-- 点击商品图片可跳转到商品详情 -->
+        <navigator class='goods_img' url="../details/details?id={{item.id}}">
+            <image class="cart-thumb" src="https://yj.beaconway.cn/uploads/{{item.img}}"></image>
+        </navigator>
+        <view class='goods_text_box'>
+            <text class='goods_name'>{{item.title}}</text>
+            <text class='goods_price'>￥{{item.price}}</text>
+            <view class='clear'></view>
+            <!-- 增加减少数量按钮 -->
+            <view class='goods_numbs'>
+                <text class='goods_reduce' bindtap="minusCount" data-index="{{index}}">-</text>
+                <text class='goods_num'>{{item.num}}</text>
+                <text class='goods_add' bindtap="addCount" data-index="{{index}}">+</text>
+            </view>
+
+            <!-- 删除按钮 -->
+            <text bindtap="deleteList" class='goods_delate' data-index="{{index}}"> × </text>
+        </view>
+        <!-- <view class="noCommodity">暂无商品</view> -->
+        <!-- <view class="noCommodity {{zhihu==null?'show':''}}">暂无商品</view> -->
+    </view>
+</view>
+
+<!-- 底部操作栏 -->
+<view class='goods_bot_nav'>
+    <!-- wx:if 是否全选显示不同图标 -->
+    <icon class='goods_bot_do' wx:if="{{selectAllStatus}}" type="success_circle" color="#f00" bindtap="selectAll" />
+    <icon class='goods_bot_do' wx:else type="circle" color="#333" bindtap="selectAll" />
+    <text class='goods_bot_text'>全选</text>
+
+    <!-- 总价 -->
+    <text class='goods_bot_total'>总价：￥{{totalPrice}}</text>
+
+    <!-- 去支付 -->
+    <button class='go_payment' bindtap='go_payment'>去支付</button>
+</view>

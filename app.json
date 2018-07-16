@@ -1,0 +1,68 @@
+{
+    "pages": [
+        
+        "pages/index/index",
+        "pages/index/boy/boy",
+        "pages/index/girl/girl",
+        "pages/index/new/new",
+        "pages/index/yuan/yuan",
+        "pages/index/star/star",
+        "pages/index/wd/wd",
+        "pages/mall/mall",
+        "pages/mall/detail/detail",
+        "pages/mall/nv/nv",
+        "pages/mall/xin/xin",
+        "pages/mall/yuan/yuan",
+        "pages/mall/tong/tong",
+        "pages/shop/shop",
+        "pages/shang/shang",
+        "pages/user/user",
+        "pages/user/order/order",
+        "pages/user/order/detail/detail",
+        "pages/user/users/users",
+        "pages/user/ding/ding",
+        "pages/user/di/di",
+        "pages/user/you/you",
+        "pages/user/di/dii/dii",
+        "pages/user/ke/ke"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "久川睛匠",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "black",
+        "selectedColor": "black",
+        "backgroundColor": "lightgrey",
+        "borderStyle": "gray",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "tu/index.png",
+                "selectedIconPath": "tu/index1.png"
+            },
+            {
+                "pagePath": "pages/mall/mall",
+                "text": "分类",
+                "iconPath": "tu/mall.png",
+                "selectedIconPath": "tu/mall1.png"
+            },
+            {
+                "pagePath": "pages/shop/shop",
+                "text": "购物车",
+                "iconPath": "tu/shop.png",
+                "selectedIconPath": "tu/shop1.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "个人中心",
+                "iconPath": "tu/user.png",
+                "selectedIconPath": "tu/user1.png"
+            }
+        ],
+        "position": "bottom"
+    }
+}

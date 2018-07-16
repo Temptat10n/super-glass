@@ -1,0 +1,52 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<!-- 商品详情页 -->
+<!-- 轮播 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{commodityImg}}" wx:for-item="item" wx:key="item">
+        <swiper-item>
+            <image src="https://yj.beaconway.cn/uploads/{{item}}" bindtap="previewImage" mode="scaleToFill"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<!-- 轮播 -->
+<!--图文详情按钮-->
+<!-- <view class='tab-bar-detail' id='{{commodityId}}'>
+    <text>图文</text>
+    <text>详情</text>
+</view> -->
+<view class="product-price-wrap">
+    <view class='price'>
+        <!-- <p class="product-price-new">￥7935.84</p> -->
+        <p class="product-price-new">￥{{commodityPrice}}</p>
+         <p class="product-price-old">原价￥{{commodityOPrice}}</p> 
+         <p class="discount">正品保障</p> 
+         <p class="discount">运费￥{{10}}</p> 
+        <!-- <p class="discount">8.8折</p> -->
+    </view>
+    <!-- <view>
+    <image src="../../images/bottomNav/share.png" />
+  </view>  -->
+</view>
+<view class="product-name-wrap">
+    <text>{{commodityTitle}}</text>
+</view>
+<!-- 图文详情按钮 -->
+
+<!-- 商品内页详情 -->
+<view class="details">
+    <!-- <scroll-view scroll-y="true"> -->
+         <template is="wxParse" data="{{wxParseData:article.nodes}}"/>    
+    <!-- </scroll-view> -->
+</view>
+<!-- 商品内页详情 -->
+<!--加入购物车 -->
+<view class='bot_button'>
+    <button open-type='contact' session-from="weapp">
+        <icon class='goods_tel'>
+            <image src='/tu/kefu.png'></image>
+        </icon>
+    </button>
+    <view class='add_cart' bindtap='go_shop'>{{setCar}}</view>
+    <view class='go_indent' bindtap='go_order'>立即购买</view>
+</view>
+<!--加入购物车-->

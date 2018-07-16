@@ -1,0 +1,115 @@
+/* pages/user/order/detail/detail.wxss */
+
+.clear {
+  clear: both;
+}
+
+.section {
+  padding: 0 30rpx;
+  border-bottom: 2rpx #e2e2e2 solid;
+}
+
+.section1 {
+  padding: 20rpx 30rpx;
+}
+
+.user_box, .coupons {
+  display: flex;
+  align-items: center;
+}
+
+.user_box_left, .coupon_text {
+  flex: 3;
+  line-height: 90rpx;
+}
+
+.user_name_box, .bay_text, .coupon_text {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.user_address_box, .bay_class {
+  font-size: 32rpx;
+  color: #aaa;
+}
+
+.go_icon {
+  width: 26rpx;
+  height: 40rpx;
+}
+
+.bay_img {
+  width: 28%;
+  height: 200rpx;
+  margin-right: 2%;
+  float: left;
+}
+
+.bay_text_box {
+  width: 70%;
+  float: right;
+}
+
+.bay_numbs {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+
+.bay_price {
+  color: #333;
+}
+
+.bay_num {
+  float: right;
+  color: #aaa;
+}
+
+.bay_goods_box {
+  padding: 0 30rpx;
+}
+
+.bay_goods_box view {
+  border-bottom: 2rpx #e2e2e2 dashed;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  color: #aaa;
+}
+
+.bay_goods_price {
+  color: goldenrod;
+}
+
+.goods_right {
+  float: right;
+}
+
+.order_bot {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 2rpx #e2e2e2 solid;
+  background: #fff;
+  display: block;
+  font-size: 36rpx;
+}
+
+.total_price {
+  width: 73%;
+  padding-left: 2%;
+  color: goldenrod;
+  float: left;
+}
+
+.go_pay {
+  width: 25%;
+  float: right;
+  line-height: 100rpx;
+  height: 100rpx;
+  background: black;
+  color: #fff;
+  text-align: center;
+}
